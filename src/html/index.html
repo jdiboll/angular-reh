@@ -1,19 +1,61 @@
 <!DOCTYPE html>
-<html ng-app>
+<html lang="en" ng-app="maxcntrl">
 <head>
   <title>Angular Practice</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<div class="container" ng-init="name = 'Joshua';
-awesome=true;">
-	<h1>{{ name }} is handsome: {{ awesome }}</h1>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navabar-header">
+				<a class="navbar-brand" href="#">Simple Form</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container main-content" ng-controller="jamie1">
+		<form>
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text"
+				class="form-control"
+				ng-model="formModel.name"
+				id="name">
+				</input>
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email"
+				class="form-control"
+				ng-model="formModel.email"
+				id="email">
+				</input>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password"
+				class="form-control"
+				ng-model="formModel.password"
+				id="password">
+				</input>
+			</div>
+			<div class="form-group" ng-click="onSubmit()">
+				<button class="btn btn-primary">Sign In</button>
+			</div>
+
+		</form>
+		<pre>{{ formModel | json }}</pre>
+	</div>
+
+	
 
 
-</div>
 	
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-     <!--<script src="js/index.js"></script>-->
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="../index.js"></script>
 	<script src="js/bundle.js"></script>
 </body>
 </html>
