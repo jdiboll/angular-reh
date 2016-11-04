@@ -9,3 +9,14 @@ app.controller('jamie1', function($scope) {
 	};
 
 });
+
+app.controller ('Kacy', function($scope) {
+	$scope.name = 'Parent';
+	$scope.reset = function () {
+		$scope.name = 'Parent';
+	}
+});
+
+app.controller ('Eden', function($scope) {
+	
+});
