@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
-  <title>TIY Project</title>
+  <title>Angular Practice</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class="app"></div>
-  <script src="js/bundle.js"></script>
+<div class="container" ng-init="name = 'Joshua';
+awesome=true;">
+	<h1>{{ name }} is handsome: {{ awesome }}</h1>
+
+
+</div>
+	
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+     <!--<script src="js/index.js"></script>-->
+	<script src="js/bundle.js"></script>
 </body>
 </html>
