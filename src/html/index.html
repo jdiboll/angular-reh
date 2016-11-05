@@ -64,24 +64,36 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-
-				<div class="parent" ng-controller="Kacy">
+				<div class="root">
 					<label>
-					<input type="text" ng-model="name" />
+						<input type="text"
+						ng-model="name" />
 					</label>
 					<p>{{ name }}</p>
 
-					<div class="child" ng-controller="Eden">
-						<label>
-						<input type="text" ng-model="name" />
-						</label>
-						<button class="btn" ng-click="reset()">Reset</button>
-						<p>{{ name }}</p>
+					<div class="row">
+						<div class="">
+							<div class="parent" ng-controller="Kacy">
+								<label>
+								<input type="text" ng-model="name" />
+								</label>
+								<p>{{ name }}</p>
+
+								<div class="child" ng-controller="Eden">
+									<label>
+									<input type="text" ng-model="name" />
+									</label>
+									<button class="btn" ng-click="reset()">Reset</button>
+									<p>{{ name }}</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 
 	
 
